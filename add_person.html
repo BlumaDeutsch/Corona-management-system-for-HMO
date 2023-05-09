@@ -7,25 +7,25 @@
    <title>Document</title>
 </head>
 <body>
-   <form action="http://localhost:5000/add_person" method="get">
-      <p>name</p>
-      <input type="text", name="name">
-      <p>last name</p>
-      <input type="text", name="last_name">
-      <p>id number</p>
-      <input type="number", name="id_number">
+   <form action="http://localhost:5000/create_person" method="post">
+      <p>name *</p>
+      <input type="text", name="name" id="name" required pattern="[A-Za-z ]+" minlength="2" maxlength="15">
+      <p>last name *</p>
+      <input type="text", name="last_name" id="last_name" required pattern="[A-Za-z ]+" min="2" maxlength="20">
+      <p>id number *</p>
+      <input type="number", name="id_number" id="id_number" required pattern="[0-9]{9}">
+      <p>date of birth *</p>
+      <input type="date", name="date_of_birth" id="date" required>
+      <p>phone *</p>
+      <input type="tel", name="phone" id="phone" required pattern="[0-9]{10}">
       <p>city</p>
       <input type="text", name="city">
       <p>street</p>
       <input type="text", name="street">
       <p>number</p>
       <input type="number", name="number">
-      <p>date of birth</p>
-      <input type="date", name="date_of_birth">
-      <p>phone</p>
-      <input type="number", name="phone">
       <p>mobile phone</p>
-      <input type="number", name="mobile_phone">
+      <input type="tel", name="mobile_phone">
 
       <p>Date of receiving first vaccination</p>
       <input type="date", name="date1">
@@ -46,8 +46,10 @@
       <p>Date of positive result</p>
       <input type="date", name="positive">
       <p>Recovery date</p>
-      <input type = "date" value = "recovery">
+      <input type = "date" name = "recovery">
       <button name="update">update</button>
+      
    </form>
+   
 </body>
 </html>
